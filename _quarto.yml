@@ -1,0 +1,99 @@
+project:
+  type: book
+  output-dir: public  
+
+lang: zh
+
+book:
+  title: "Large Language Model in Action"
+  favicon: favicon.png
+  open-graph: true
+  author: "VII QA"
+  date: today
+  date-format: "YYYY-MM-DD"
+  cover-image: cover.png
+  repo-url: https://github.com/wangwei1237/LLM_in_Action
+  repo-actions: [edit, issue]
+  search: true
+  page-footer: Copyright VII-QA. All Rights Reserved.
+  chapters:
+    - index.qmd
+    - preface.qmd
+    - part: "LLM 基本概念"
+      chapters:
+      - llm_intro.qmd
+      - tokens.qmd
+      - embedding.qmd
+      - sft.qmd
+      - prompt_engineer.qmd
+      - hallucination.qmd
+      - rag_intro.qmd
+      - agent_intro.qmd
+      - assistants.qmd
+    - part: "LangChain"
+      chapters:
+      - langchain_intro.qmd
+      - langchain_serialization.qmd
+      - langchain_retrieval.qmd
+      - langchain_function_call.qmd
+      - langchain_agent_react.qmd
+      - langchain_agent_chat.qmd
+      - langchain_openai_assistant.qmd
+      - langchain_agent_fc.qmd
+      - langchain_agent_pae.qmd
+      - langsmith_intro.qmd
+    - part: "Semantic Kernel"
+      chapters:
+      - semantickernel_intro.qmd
+      - semantickernel_prompt.qmd
+      - semantickernel_plugins.qmd
+      - semantickernel_promptflow.qmd
+    - part: "其他框架"
+      chapters:
+      - autogen.qmd
+      - embedchain_intro.qmd
+      - langflow_intro.qmd
+    - part: "Case Study"
+      chapters:
+      - case1.qmd
+    - references.qmd
+  appendices: 
+    - glossary.qmd
+    - langchain_install.qmd
+    - milvus_install.qmd
+  site-url: https://wangwei1237.github.io/LLM_in_Action/
+  navbar:
+    logo: favicon.png
+    search: true
+    left:
+      - text: "博客"
+        icon: "house-fill"
+        href: "https://wangwei1237.github.io/"
+      - text: "书籍"
+        icon: "bookshelf"
+        menu: 
+          - text: "动手学深度学习"
+            href: "https://zh.d2l.ai/"
+          - text: "Learn Prompting"
+            href: "https://learnprompting.org/zh-Hans/docs/intro"
+          - text: "Stabel Diffusion 提示词手册"
+            href: "https://pan.baidu.com/s/1dciwgbhO-lfKyRo8lOqW9Q?pwd=cm9q"
+      - text: "关于"
+        icon: "person-badge-fill"
+        href: "https://wangwei1237.github.io/aboutme/"
+
+bibliography: references.bib
+csl: acm-sig-proceedings.csl
+
+format:
+  html:
+    theme: 
+      light: [cosmo, theme.scss]
+    code-copy: true
+    code-overflow: wrap
+    cover-image: cover.png
+
+comments:
+  utterances:
+    repo: wangwei1237/LLM_in_Action
+    label: comment
